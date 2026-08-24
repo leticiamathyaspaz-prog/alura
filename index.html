@@ -56,13 +56,12 @@
     const botao = document.querySelector("button");
     botao.addEventListener("click", botaoClicado);
 
-    // Corrigido "fuction" para "function"
     function botaoClicado() {
       console.log("fui clicado");
-      // Corrigido "ler" para "let"
+    
       let texto = botao.querySelector("span");
       
-      // Incrementa o valor numérico
+
       texto.textContent = Number(texto.textContent) + 1;
     }
   </script>
