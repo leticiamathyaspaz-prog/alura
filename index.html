@@ -13,13 +13,6 @@
       margin: 0 auto;
       padding: 16px;
     }
-    img {
-      width: 80px;
-      height: auto;
-      max-width: 100%;
-      display: block;
-      margin: 10px 0;
-    }
 
     main {
       background-color: #FFFFFF;
@@ -28,15 +21,20 @@
       margin: 0 auto;
       padding: 16px;
       display: flex;
+      align-items: center;
+      gap: 16px;
     }
-     img {
-       width: 80px;
-       height: 80px;
-     }
-     .artigo autor{
-       font-weight: bold;
+
+    img {
+      width: 80px;
+      height: 80px;
+      display: block;
     }
-    
+
+    /* Corrigido o hífen da classe */
+    .artigo-autor {
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -47,23 +45,26 @@
   <main>
     <img src="Gemini_Generated_Image_a2ap1oa2ap1oa2ap.png" alt="Ícone azul de um átomo e uma lupa destacando uma fita de DNA sobre fundo branco.">
     <div>
-    <h2>Meu primeiro post</h2>
-    <p class="artigo-autor">Por: Leticia Mathyas</p>
-    <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar algumas curiosidades científicas.</p>
-      <button>​ ❤️​<span>0</span></button>
+      <h2>Meu primeiro post</h2>
+      <p class="artigo-autor">Por: Leticia Mathyas</p>
+      <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar algumas curiosidades científicas.</p>
+      <button>❤️ <span>0</span></button>
     </div>   
-    
   </main>
-</body>
-<script>
-const botao = document.querySelector("button");
-  botao.addEventListener("click", botaoClicado);
 
-  fuction botaoClicado(){
-    console.log("fui clicado");
-    ler texto = botao.querySelector("span");
-    texto.textContent++;
-  }
-  
-</script>
+  <script>
+    const botao = document.querySelector("button");
+    botao.addEventListener("click", botaoClicado);
+
+    // Corrigido "fuction" para "function"
+    function botaoClicado() {
+      console.log("fui clicado");
+      // Corrigido "ler" para "let"
+      let texto = botao.querySelector("span");
+      
+      // Incrementa o valor numérico
+      texto.textContent = Number(texto.textContent) + 1;
+    }
+  </script>
+</body>
 </html>
