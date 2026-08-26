@@ -20,55 +20,14 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 16px;
-      display: flex;
     }
-    article{
-      display:flex;
+
+    article {
+      display: flex;
       align-items: center;
       gap: 16px;
     }
 
-
-    .artigo-autor {
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <article>
-    <h1>Minha página sobre curiosidades científicas</h1>
-    <p>Aqui irei compartilhar algumas curiosidades científicas interessantes</p>
-  </header>
-  <main>
-    <img src="Gemini_Generated_Image_a2ap1oa2ap1oa2ap.png" alt="Ícone azul de um átomo e uma lupa destacando uma fita de DNA sobre fundo branco.">
-    <div>
-      <h2>Meu primeiro post</h2>
-      <p class="artigo-autor">Por: Leticia Mathyas</p>
-      <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar algumas curiosidades científicas.</p>
-      <button>❤️ <span>0</span></button>
-      <button>👍​ <span>0</span></button>
-    </div>   
-     </article>
-    
-      
-    </article>
-  </main>
-
-  <script>
-    const botoes = document.querySelectorAll("button");
-
-    botoes.forEach( function(botao){
-    botao.addEventListener("click", botaoClicado);
-    function botaoClicado() {
-      console.log("fui clicado");
-      let texto = botao.querySelector("span");
-      texto.textContent = Number(texto.textContent) + 1;
-    }
-  })
-                   
-  </script>
-</html>
     img {
       width: 80px;
       height: 80px;
@@ -81,19 +40,23 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Minha página sobre curiosidades científicas</h1>
     <p>Aqui irei compartilhar algumas curiosidades científicas interessantes</p>
   </header>
+
   <main>
-    <img src="Gemini_Generated_Image_a2ap1oa2ap1oa2ap.png" alt="Ícone azul de um átomo e uma lupa destacando uma fita de DNA sobre fundo branco.">
-    <div>
-      <h2>Meu primeiro post</h2>
-      <p class="artigo-autor">Por: Leticia Mathyas</p>
-      <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar algumas curiosidades científicas.</p>
-      <button>❤️ <span>0</span></button>
-      <button>👍 <span>0</span></button>
-    </div>    
+    <article>
+      <img src="Gemini_Generated_Image_a2ap1oa2ap1oa2ap.png" alt="Ícone azul de um átomo e uma lupa destacando uma fita de DNA sobre fundo branco.">
+      <div>
+        <h2>Meu primeiro post</h2>
+        <p class="artigo-autor">Por: Leticia Mathyas</p>
+        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar algumas curiosidades científicas.</p>
+        <button>❤️ <span>0</span></button>
+        <button>👍 <span>0</span></button>
+      </div>
+    </article>
   </main>
 
   <script>
@@ -107,5 +70,6 @@
       });
     });
   </script>
+
 </body>
 </html>
