@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
     header {
       background-color: #25376e;
       color: #FFFFFF;
@@ -12,6 +19,7 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 16px;
+      border-radius: 8px 8px 0 0;
     }
 
     main {
@@ -22,23 +30,47 @@
       padding: 16px;
       display: flex;
       flex-direction: column;
-      gap: 32px; /* Adicionado um espaço entre os artigos */
+      gap: 32px; /* Espaço entre os artigos */
+      border-radius: 0 0 8px 8px;
     }
 
     article {
       display: flex;
       align-items: center;
       gap: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 16px;
+    }
+
+    article:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
     }
 
     img {
       width: 80px;
       height: 80px;
+      object-fit: cover;
       display: block;
+      border-radius: 4px;
     }
 
     .artigo-autor {
       font-weight: bold;
+    }
+
+    button {
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 8px;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #e2e6ea;
     }
   </style>
 </head>
@@ -50,7 +82,7 @@
   </header>
 
   <main>
-  
+    <!-- Primeiro Artigo -->
     <article>
       <img src="Gemini_Generated_Image_a2ap1oa2ap1oa2ap.png" alt="Ícone azul de um átomo e uma lupa destacando uma fita de DNA sobre fundo branco.">
       <div>
@@ -62,31 +94,30 @@
       </div>
     </article>
 
-    
+    <!-- Segundo Artigo -->
     <article>
       <img src="sua-imagem-aqui.png" alt="Descrição da imagem da segunda postagem.">
       <div>
-        <h2>segunda postagem</h2>
+        <h2>Segunda postagem</h2>
         <p class="artigo-autor">Por: Leticia Mathyas</p>
-        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar algumas curiosidades científicas.</p>
+        <p>Mais uma curiosidade incrível sobre o universo da ciência para você descobrir.</p>
         <button>❤️ <span>0</span></button>
         <button>👍 <span>0</span></button>
       </div>
     </article>
-  </main>
-  
-    <article>
-      <img src="sua-imagem-aqui.png" alt="Descrição da imagem da segunda postagem.">
-      <div>
-        <h2>segunda postagem</h2>
-        <p class="artigo-autor">Por: Leticia Mathyas</p>
-        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar algumas curiosidades científicas.</p>
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
-      </div>
-    </article>
-  </main>
 
+    <!-- Terceiro Artigo -->
+    <article>
+      <img src="sua-imagem-aqui.png" alt="Descrição da imagem da terceira postagem.">
+      <div>
+        <h2>Terceira postagem</h2>
+        <p class="artigo-autor">Por: Leticia Mathyas</p>
+        <p>Descubra fatos fascinantes sobre o corpo humano e a natureza.</p>
+        <button>❤️ <span>0</span></button>
+        <button>👍 <span>0</span></button>
+      </div>
+    </article>
+  </main>
 
   <script>
     const botoes = document.querySelectorAll("button");
@@ -95,7 +126,6 @@
       let curtiu = false;
 
       botao.addEventListener("click", function() {
-        console.log("fui clicado");
         let texto = botao.querySelector("span");
 
         if (curtiu === false) {
