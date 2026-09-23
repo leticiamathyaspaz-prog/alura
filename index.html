@@ -10,23 +10,25 @@
   
   <style>
     :root {
-      --cor-primaria: #8b0000;
-      --cor-secundaria: #b22222;
-      --cor-fundo: #faf0f0;
+      /* Paleta de Vermelho Vinho (Modo Claro) */
+      --cor-primaria: #58111a;
+      --cor-secundaria: #7a1c27;
+      --cor-fundo: #fcf7f7;
       --cor-card: #ffffff;
       --cor-texto: #2b2b2b;
       --cor-contraste: #ffffff;
-      --cor-botao: #ffe6e6;
+      --cor-botao: #f4e6e8;
     }
 
     .tema-escuro {
-      --cor-primaria: #ff4d4d;
-      --cor-secundaria: #ff6666;
-      --cor-fundo: #121212;
-      --cor-card: #1e1e1e;
-      --cor-texto: #e0e0e0;
+      /* Paleta de Vermelho Vinho Suave (Modo Escuro) */
+      --cor-primaria: #a33845;
+      --cor-secundaria: #c95362;
+      --cor-fundo: #141112;
+      --cor-card: #1f1a1b;
+      --cor-texto: #e8e3e3;
       --cor-contraste: #1f1f1f;
-      --cor-botao: #2b1a1a;
+      --cor-botao: #2d171a;
     }
       
     body {
@@ -94,15 +96,18 @@
     }
 
     .btn-tema-escuro {
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-    font-size: 32px;
-    padding: 12px;
-    background-color: var(--cor-primaria);
-    border-radius: 50%;
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      font-size: 24px;
+      padding: 12px;
+      background-color: var(--cor-primaria);
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
-    
 
     .fonte-link {
       color: var(--cor-secundaria);
@@ -113,7 +118,7 @@
       color: var(--cor-primaria);
     }
 
-    button {
+    .btn-reacao {
       background-color: var(--cor-botao);
       border: 1px solid var(--cor-primaria);
       color: var(--cor-primaria);
@@ -126,7 +131,7 @@
       transition: background-color 0.2s, color 0.2s;
     }
 
-    button:hover {
+    .btn-reacao:hover {
       background-color: var(--cor-primaria);
       color: #ffffff;
     }
@@ -146,8 +151,8 @@
         <h2>Meu primeiro post</h2>
         <p class="artigo-autor">Por: Leticia Mathyas</p>
         <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar algumas curiosidades científicas.</p>
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
+        <button class="btn-reacao">❤️ <span>0</span></button>
+        <button class="btn-reacao">👍 <span>0</span></button>
       </div>
     </article>
 
@@ -169,8 +174,8 @@
           </strong><br>
         </p>
         
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
+        <button class="btn-reacao">❤️ <span>0</span></button>
+        <button class="btn-reacao">👍 <span>0</span></button>
       </div>
     </article>
 
@@ -190,25 +195,24 @@
           </strong><br>
         </p>
         
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
+        <button class="btn-reacao">❤️ <span>0</span></button>
+        <button class="btn-reacao">👍 <span>0</span></button>
       </div>
     </article>
-    
-    <button class="btn-tema-escuro">🌓</button>
-    
   </main>
 
-  <script>
-    const botoes = document.querySelectorAll("button");
+  <button class="btn-tema-escuro">🌓</button>
 
-    botoes.forEach(function(botao) {
+  <script>
+    const botoesReacao = document.querySelectorAll(".btn-reacao");
+
+    botoesReacao.forEach(function(botao) {
       let curtiu = false;
 
       botao.addEventListener("click", function() {
         let texto = botao.querySelector("span");
 
-        if (curtiu === false) {
+        if (!curtiu) {
           texto.textContent = Number(texto.textContent) + 1;
           curtiu = true;
         } else {
@@ -222,17 +226,13 @@
     btnTemaEscuro.addEventListener("click", mudaTema);
 
     function mudaTema() {
-    const corpoPagina = document.body;
-    if (corpoPagina.classList.contains("tema-escuro")) {
-        corpoPagina.classList.remove("tema-escuro");
-    } else {
-        corpoPagina.classList.add("tema-escuro");
+      const corpoPagina = document.body;
+      corpoPagina.classList.toggle("tema-escuro");
     }
-    }
-    
   </script>
 
 </body>
 </html>
+
 
 
