@@ -9,32 +9,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   
   <style>
-
     :root {
-  --cor-primaria: #58111a;
-  --cor-secundaria: #800020;
-  --cor-fundo: #f9f4f4;
-  --cor-card: #ffffff;
-  --cor-texto: #333333;
-  --cor-contraste: #fffcfc;
-  --cor-botao: #fff0f2;
-}
+      --cor-primaria: #58111a;
+      --cor-secundaria: #800020;
+      --cor-fundo: #f9f4f4;
+      --cor-card: #ffffff;
+      --cor-texto: #333333;
+      --cor-contraste: #fffcfc;
+      --cor-botao: #fff0f2;
+    }
 
-.tema-escuro {
-  --cor-primaria: #ffb3b8;
-  --cor-secundaria: #ff8591;
-  --cor-fundo: #121212;
-  --cor-card: #1e1e1e;
-  --cor-texto: #e0e0e0;
-  --cor-contraste: #282828;
-  --cor-botao: #2c2527;
-}
+    .tema-escuro {
+      --cor-primaria: #ffb3b8;
+      --cor-secundaria: #ff8591;
+      --cor-fundo: #121212;
+      --cor-card: #1e1e1e;
+      --cor-texto: #e0e0e0;
+      --cor-contraste: #282828;
+      --cor-botao: #2c2527;
+    }
 
-
-      
     body {
       font-family: 'Inter', Arial, sans-serif;
-      background-color: #f9f4f4;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
       margin: 0;
       padding: 20px;
       max-width: 100vw;
@@ -51,27 +49,26 @@
 
     main {
       background-color: var(--cor-fundo);
-      color: var(--cor-primaria);
+      color: var(--cor-texto);
       margin: 0 auto;
       padding: 16px;
       display: flex;
       flex-direction: column;
       gap: 32px;
       border-radius: 0 0 8px 8px;
-      border: 1px solid #58111a;
+      border: 1px solid var(--cor-primaria);
       border-top: none;
     }
 
     article {
       display: flex;
       border: 1px solid var(--cor-primaria);
-      
       margin: 16px 0;
       gap: 16px;
       padding: 16px;
       align-items: center;
       border-radius: 6px;
-      background-color: #fffcfc;
+      background-color: var(--cor-card);
     }
 
     article:last-child {
@@ -79,7 +76,7 @@
     }
 
     h2 {
-      color: #58111a; 
+      color: var(--cor-primaria); 
       margin-top: 0;
     }
 
@@ -93,35 +90,34 @@
 
     .artigo-autor {
       font-weight: bold;
-      color: #800020;
+      color: var(--cor-secundaria);
     }
 
-  
     .fonte-link {
-      color: #800020;
+      color: var(--cor-secundaria);
       text-decoration: underline;
     }
 
     .fonte-link:hover {
-      color: #58111a;
+      color: var(--cor-primaria);
     }
 
     button {
-      background-color: #fff0f2;
-      border: 1px solid #58111a;
-      color: #58111a;
+      background-color: var(--cor-botao);
+      border: 1px solid var(--cor-primaria);
+      color: var(--cor-primaria);
       padding: 6px 12px;
       border-radius: 4px;
       cursor: pointer;
       margin-right: 8px;
       font-size: 14px;
       font-weight: bold;
-      transition: background-color 0.2s;
+      transition: background-color 0.2s, color 0.2s;
     }
 
     button:hover {
-      background-color: #58111a;
-      color: #FFFFFF;
+      background-color: var(--cor-primaria);
+      color: var(--cor-contraste);
     }
   </style>
 </head>
@@ -133,85 +129,8 @@
   </header>
 
   <main>
-    <body class="tema-escuro">
-    
     <article>
       <img src="Gemini_Generated_Image_a2ap1oa2ap1oa2ap.png" alt="Ícone azul de um átomo e uma lupa destacando uma fita de DNA sobre fundo branco.">
       <div>
         <h2>Meu primeiro post</h2>
-        <p class="artigo-autor">Por: Leticia Mathyas</p>
-        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar algumas curiosidades científicas.</p>
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
-      </div>
-    </article>
-
-    
-    <article>
-      <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2pmNmk1b3g3NnR3aXJlNXYxZDhkdnplcGhrcXMxcGxwZzlkNDhlZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LtwGskeJs0psQ/giphy.gif" alt="agua-viva nadando suavemente">
-      <div>
-        <h2>Animais sem cérebro, coração ou ossos: O segredo milenar das águas-vivas</h2>
-        <p class="artigo-autor">Por: Leticia Mathyas</p>
-        <p>As águas-vivas habitam os oceanos há mais de 500 milhões de anos,
-          tendo sobrevivido a todas as extinções em massa.
-          Compostas por cerca de 95% de água, elas desafiam a biologia tradicional por não possuírem cérebro,
-          coração, sangue ou ossos. Em vez disso, contam com uma rede nervosa descentralizada para reagir ao ambiente
-          e absorvem oxigênio diretamente da água por difusão simples.
-          Algumas espécies ainda possuem o incrível poder da imortalidade biológica, revertendo seu ciclo de vida.
-          
-          <br><br><strong>Fontes: 
-            <a href="https://ocean.si.edu/" target="_blank" rel="noopener noreferrer" class="fonte-link">Smithsonian Institution (Ocean Portal)</a> / 
-            <a href="https://www.nationalgeographic.com/" target="_blank" rel="noopener noreferrer" class="fonte-link">National Geographic</a>
-          </strong><br>
-        </p>
-        
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
-      </div>
-    </article>
-
-    
-    <article>
-      <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDAwanl3enQxbWFib2RpMXBhNm5qMTVtMDFwZXY2eGlyZGhhZmduZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2bYewTk7K2No1NvcuK/giphy.gif" alt="cérebro humano">
-      <div>
-        <h2>O cérebro humano produz eletricidade suficiente para acender uma lâmpada</h2>
-        <p class="artigo-autor">Por: Leticia Mathyas</p>
-        <p>O nosso cérebro é uma verdadeira usina de energia biológica. Quando estamos acordados,
-          os bilhões de neurônios que o compõem geram impulsos elétricos contínuos através de reações químicas. 
-          Toda essa atividade combinada produz 
-          cerca de 12 a 25 watts de eletricidade — o que é mais do que suficiente para alimentar uma pequena lâmpada de LED.
-
-          <br><br><strong>Fontes: 
-            <a href="https://www.nih.gov/" target="_blank" rel="noopener noreferrer" class="fonte-link">National Institutes of Health (NIH)</a> / 
-            <a href="https://www.health.harvard.edu/" target="_blank" rel="noopener noreferrer" class="fonte-link">Harvard Health Publishing</a>
-          </strong><br>
-        </p>
-        
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
-      </div>
-    </article>
-  </main>
-
-  <script>
-    const botoes = document.querySelectorAll("button");
-
-    botoes.forEach(function(botao) {
-      let curtiu = false;
-
-      botao.addEventListener("click", function() {
-        let texto = botao.querySelector("span");
-
-        if (curtiu === false) {
-          texto.textContent = Number(texto.textContent) + 1;
-          curtiu = true;
-        } else {
-          texto.textContent = Number(texto.textContent) - 1;
-          curtiu = false;
-        }
-      });
-    });
-  </script>
-
-</body>
-</html>
+        <p class="artigo-autor">Por: Leticia Mathyas</
