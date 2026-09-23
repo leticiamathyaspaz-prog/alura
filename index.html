@@ -9,8 +9,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   
   <style>
+
+    :root {
+  --cor-primaria: #58111a;
+  --cor-secundaria: #800020;
+  --cor-fundo: #f9f4f4;
+  --cor-card: #ffffff;
+  --cor-texto: #333333;
+  --cor-contraste: #fffcfc;
+  --cor-botao: #fff0f2;
+}
+
+.tema-escuro {
+  --cor-primaria: #ffb3b8;
+  --cor-secundaria: #ff8591;
+  --cor-fundo: #121212;
+  --cor-card: #1e1e1e;
+  --cor-texto: #e0e0e0;
+  --cor-contraste: #282828;
+  --cor-botao: #2c2527;
+}
+
+
+      
     body {
-      font-family: 'Inter', Arial, sans-serif; /* Aplicando a nova fonte */
+      font-family: 'Inter', Arial, sans-serif;
       background-color: #f9f4f4;
       margin: 0;
       padding: 20px;
@@ -18,8 +41,8 @@
     }
 
     header {
-      background-color: #58111a; 
-      color: #FFFFFF;
+      background-color: var(--cor-primaria); 
+      color: var(--cor-contraste);
       text-align: center;
       margin: 0 auto;
       padding: 16px;
@@ -27,8 +50,8 @@
     }
 
     main {
-      background-color: #FFFFFF;
-      color: #333333;
+      background-color: var(--cor-fundo);
+      color: var(--cor-primaria);
       margin: 0 auto;
       padding: 16px;
       display: flex;
@@ -41,7 +64,8 @@
 
     article {
       display: flex;
-      border: 1px solid #800020; 
+      border: 1px solid var(--cor-primaria);
+      
       margin: 16px 0;
       gap: 16px;
       padding: 16px;
@@ -101,7 +125,7 @@
     }
   </style>
 </head>
-<body>
+<body class="tema-escuro">
 
   <header>
     <h1>Minha página sobre curiosidades científicas</h1>
@@ -109,6 +133,7 @@
   </header>
 
   <main>
+    <body class="tema-escuro">
     
     <article>
       <img src="Gemini_Generated_Image_a2ap1oa2ap1oa2ap.png" alt="Ícone azul de um átomo e uma lupa destacando uma fita de DNA sobre fundo branco.">
